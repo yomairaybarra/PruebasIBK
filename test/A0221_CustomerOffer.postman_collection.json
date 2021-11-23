@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "d5716e5b-f3df-4473-9221-cd2d951d1377",
+		"name": "A0221_CustomerOffer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CustomerOfferREST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "serviceId",
+						"value": "APA",
+						"type": "text"
+					},
+					{
+						"key": "consumerId",
+						"value": "BPI",
+						"type": "text"
+					},
+					{
+						"key": "moduleId",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "channelCode",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "messageId",
+						"value": "415",
+						"type": "text"
+					},
+					{
+						"key": "timestamp",
+						"value": "2020-06-23T18:53:54.191Z",
+						"type": "text"
+					},
+					{
+						"key": "countryCode",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "groupMember",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "netId",
+						"value": "BI",
+						"type": "text"
+					},
+					{
+						"key": "userId",
+						"value": "APPA0000",
+						"type": "text"
+					},
+					{
+						"key": "supervisorId",
+						"value": "APPA0000",
+						"type": "text"
+					},
+					{
+						"key": "deviceId",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "serverId",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "branchCode",
+						"value": "898",
+						"type": "text"
+					},
+					{
+						"key": "operationNumber",
+						"value": "123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customer\": {\r\n    \"identificationDocumentType\": \"01\",\r\n    \"identificationDocumentNumber\": \"80020399\"\r\n  },\r\n  \"transaction\": {\r\n    \"datosBSE\": {\r\n      \"currencyCode\": \"001\",\r\n      \"amount\": \"18000.00\"\r\n    },\r\n    \"exchangeRate\": {\r\n      \"purchase\": \"\",\r\n      \"sale\": \"\"\r\n    }\r\n  },\r\n  \"paymentMethod\": {\r\n    \"paymentMethodIdentification\": \"04\",\r\n    \"operationType\": \"A\",\r\n    \"currencyCode\": \"001\",\r\n    \"amount\": \"18000.00\",\r\n    \"equivalentCurrencyCode\": \"\",\r\n    \"changeOfArbitration\": \"\",\r\n    \"tradingRateIndicator\": \"\",\r\n    \"taxIndicator\": \"\",\r\n    \"customerAcount\": {\r\n      \"controlAccountCode\": {\r\n        \"organisationCode\": \"03\",\r\n        \"currencyCode\": \"001\",\r\n        \"accountType\": \"002\"\r\n      },\r\n      \"controlAccountNumber\": {\r\n        \"accountBranchId\": \"898\",\r\n        \"accountNumber\": \"7002792742\"\r\n      },\r\n      \"electronNumber\": \"4547770000281956\",\r\n      \"retentionType\": \"\",\r\n      \"dinamicGloss\": \"EXTRACASH BP\"\r\n    },\r\n    \"accountingAccount\": {\r\n      \"branchCodeSender\": \"\",\r\n      \"branchCodeReciver\": \"\",\r\n      \"accountingAccountNumber\": \"\",\r\n      \"noteNumber\": \"\",\r\n      \"taxIndicator\": \"\"\r\n    },\r\n    \"chargeCard\": {\r\n\r\n      \"cardId\": \"\",\r\n      \"cardHolderIndicator\": \"\",\r\n      \"dinamicGloss\": \"\"\r\n    }\r\n  },\r\n  \"disbursementCash\": {\r\n    \"cardId\": \"4913379980078550\",\r\n    \"disbursementAmount\": \"18000.00\",\r\n    \"selectedPaymentTerm\": \"24\",\r\n    \"installment\": {\r\n      \"amount\": \"1135.26\",\r\n      \"lower\": \"00\",\r\n      \"top\": \"00\"\r\n    },\r\n    \"deferredInterestAmount\": \"186.20\",\r\n    \"financedAmount\": \"18186.20\",\r\n    \"firstDueDate\": \"2020-08-03\",\r\n    \"insuranceAmount\": \"252.00\",\r\n    \"insuranceEligibility\": \"S\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7800/customer-offer/v1/extracash-disbursement/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7800",
+					"path": [
+						"customer-offer",
+						"v1",
+						"extracash-disbursement",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
